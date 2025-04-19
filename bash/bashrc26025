@@ -103,17 +103,6 @@ alias wdir='cd /mnt/c/Users/yad75360/Desktop/wdir'
 alias sb='cd /mnt/g/My\ Drive/Vault/Personal_Vault'
 alias cfg='cd /home/rao/.config'
 
-# Docker alias
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias dr='docker run'
-
-
-# Kubernetes alias
-alias kcd='kubectl create deployment'
-alias kgd='kubectl get deployments'
-alias kgp='kubectl get pods'
-alias kdp='kubectl describe pod'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
