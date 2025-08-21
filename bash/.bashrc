@@ -11,7 +11,7 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-
+pswd='9090'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -103,6 +103,10 @@ alias wdir='cd /mnt/c/Users/yad75360/Desktop/wdir'
 alias sb='cd /mnt/g/My\ Drive/Vault/Personal_Vault'
 alias cfg='cd /home/rao/.config'
 
+alias king='echo $pswd | sudo -S'
+
+
+
 # Docker alias
 alias dps='docker ps'
 alias dpsa='docker ps -a'
@@ -111,16 +115,54 @@ alias dr='docker run'
 
 # Kubernetes alias
 alias kcd='kubectl create deployment'
-alias kgd='kubectl get deployments'
-alias kgp='kubectl get pods'
-alias kdp='kubectl describe pod'
 
+alias kgdp='kubectl get deployments'
+alias kgpo='kubectl get pods'
+alias kgns='kubectl get ns'
+alias kgsvc='kubectl get svc'
+alias kgno='kubectl get nodes'
+alias kgrs='kubectl get rs'
+alias kgall='kubectl get all'
+alias kgsc='kubectl get sc'
+alias kgpvc='kubectl get pvc'
+alias kgpv='kubectl get pv'
+
+
+
+alias kdes='kubectl describe'
+alias kdespo='kubectl describe pod'
+alias kdessvc='kubectl describe svc'
+alias kdesrs='kubectl describe rs'
+
+alias klog='kubectl logs'
+alias klogf='kubectl logs -f'
+
+alias krn='kubectl run'
+
+alias kex='kubectl exec'
+alias kexit='kubectl exec -it'
+
+alias kapf='kubectl apply -f'
+
+alias kdlf='kubectl delete -f'
+
+alias kdl='kubectl delete'
+alias kdlpo='kubectl delete pod'
+alias kdlrs='kubectl delete rs'
+alias kdlsvc='kubectl delete svc'
 
 # ssh alias
-alias hlab='ssh lab@192.168.0.147'
+alias rlab='ssh -p 2222 yogesh@peepin.amitinfotech.net'
+alias hlab='ssh hlab@192.168.0.239'
+
 # Add an "alert" alias for long running commands.  Use like so:
+#
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+alias sbash='source ~/.bashrc'
+alias ebash='vim ~/.config/bash/.bashrc'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -156,3 +198,6 @@ bind -x '"\C-l":clear'
 export PS1="\W:\$ "
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# TIDE Terminal IDE
+export PATH="/home/rao/.tide/bin:$PATH"
